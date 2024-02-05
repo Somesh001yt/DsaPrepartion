@@ -31,6 +31,8 @@ function rotatedArray(nums, k) {
     return nums;
 }
 
+
+
 function reverseArray(arr, start, end) {
     while (start < end) {
         const temp = arr[start];
@@ -40,5 +42,9 @@ function reverseArray(arr, start, end) {
         end--;
     }
 }
+
+
+
+
 
 console.log(rotatedArray([3,4,5,6,8], 3))
