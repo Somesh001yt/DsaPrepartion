@@ -15,5 +15,5 @@ const result = linearSearch(array, targetValue);
 if (result !== -1) {
     console.log(`${targetValue} found at index ${result}.`);
 } else {
-    console.log(`${targetValue} not in array.`);
+    console.log(`${targetValue} xvdnot in array.`);
 }
