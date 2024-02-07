@@ -43,7 +43,7 @@ function searchRotateArray(arr, target) {
   }
   
 
-const rotatedArray = [4, 5, 6, 7, 0, 1, 2];
-const targetElement = 0;
-const result = searchRotateArray(rotatedArray, targetElement);
-console.log(result);
+  const rotatedArray = [4, 5, 6, 7, 0, 1, 2];
+  const targetElement = 0;
+  const result = searchRotateArray(rotatedArray, targetElement);
+  console.log(result);

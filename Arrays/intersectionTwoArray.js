@@ -7,7 +7,7 @@ var intersection = function(nums1, nums2) {
             let second = nums2[j];
             if (first === second && !inter.includes(first)) {
                 inter.push(first);
-                break; // Break the inner loop when a match is found to avoid duplicates
+                break; 
             }
         }
     }
