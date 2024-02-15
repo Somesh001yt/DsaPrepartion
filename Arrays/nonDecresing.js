@@ -1,7 +1,7 @@
 function checkPossibility(nums) {
     let modifyCount = 0;
    
-      for(let i=0; i<nums.length; i++){
+      for(let i=0; i<nums.length - 1; i++){
           if(nums[i] > nums[i+1]){
               modifyCount ++
    
@@ -21,4 +21,4 @@ function checkPossibility(nums) {
    }
    
    console.log(checkPossibility([4, 2, 3])); // Output: true
-   console.log(checkPossibility([4,5,3, 2, 1]));
+   console.log(checkPossibility([-1, 4, 2, 3]));

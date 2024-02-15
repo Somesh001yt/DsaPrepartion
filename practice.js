@@ -1,5 +1,5 @@
+  function makeUniqueArray(nums) {
 
-function makeUniqueArray(nums) {
     nums.sort((a,b)=> a-b)
 
     let count = 0;
@@ -12,9 +12,9 @@ function makeUniqueArray(nums) {
         }
     }
     return count
-}
-
-
-
-const result = makeUniqueArray([3,2,1,2,1,7]);  // [3,4,1,2,5,7]
-console.log(result);
+   
+    
+   }
+   
+   const result = makeUniqueArray([3,2,1,2,1,7]);  // [3,4,1,2,5,7]
+   console.log(result);

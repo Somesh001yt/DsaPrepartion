@@ -14,6 +14,19 @@ const firstMissingPositive = (nums) => {
 }
 
 
+
+// function firstMissingPositive(nums) {
+//     const numSet = new Set(nums);
+
+//     // Iterate from 1 onwards to find the first missing positive integer
+//     for (let i = 1; i <= nums.length + 1; i++) {
+//         if (!numSet.has(i)) {
+//             return i;
+//         }
+//     }
+// }
+
+
 const nums = [3, 4, -1, 1];
 const result = firstMissingPositive(nums);
 console.log(result); // Output: 2
