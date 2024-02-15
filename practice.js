@@ -1,20 +1,27 @@
-  function makeUniqueArray(nums) {
+  function rotatedArray(nums , k) {
+ let size = nums.length -1
+  if(size > k){
+    k = k% size
 
-    nums.sort((a,b)=> a-b)
+    rotated(nums , 0 , size - 1)
 
-    let count = 0;
- 
-    for(let i = 1; i <nums.length;i++){
-        if(nums[i]<=nums[i-1]){
-            let val = nums[i-1] - nums[i] + 1
-            count += val 
-            nums[i] = nums[i-1] + 1
-        }
-    }
-    return count
+    rotated(nums , 0 , k - 1)
+
+    rotated(nums , k , size - 1)
+  }
+  return nums
    
-    
+   }
+
+
+   function rotated (arr , start , end){
+    while(start <= end){
+      let temp = arr[start]
+      arr[start] = arr[end]
+      arr[end] = temp
+      start++
+      end--
+    }
    }
    
-   const result = makeUniqueArray([3,2,1,2,1,7]);  // [3,4,1,2,5,7]
-   console.log(result);
+   console.log(rotatedArray([3,4,5,6,8], 3))
