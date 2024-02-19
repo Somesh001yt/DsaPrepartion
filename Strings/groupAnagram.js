@@ -14,4 +14,4 @@ function groupAnagram (strs){
 }
 
 
-console.log(groupAnagram(["eat","tea","tan","ate","nat","bat"]))
+    console.log(groupAnagram(["eat","tea","tan","ate","nat","bat"]))
