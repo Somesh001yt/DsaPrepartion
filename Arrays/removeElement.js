@@ -12,6 +12,7 @@ var removeElement = function(nums, val) {
         }
     }
     return left
+
 };
 
 

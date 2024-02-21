@@ -12,6 +12,7 @@ function sortedArray(arr) {
     let pivot =arr[0]
 
     for(let i =1; i< arr.length; i++){
+        
         if(arr[i] < pivot){
             left.push(arr[i])
             console.log(left)
