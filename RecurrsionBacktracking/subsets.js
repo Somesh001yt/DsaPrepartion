@@ -10,14 +10,18 @@ function subsets(nums) {
     let temp = [];
   
     function recursiveSubsets(nums, i) {
+      // base case
       if (i === nums.length) {
         return result.push([...temp]);
       }
   
+      // exclude
+      recursiveSubsets(nums, i + 1);
+
+      // include
       temp.push(nums[i]);
       recursiveSubsets(nums, i + 1);
       temp.pop();
-      recursiveSubsets(nums, i + 1);
     }
   
     recursiveSubsets(nums, 0);

@@ -1,33 +1,23 @@
-function levelOrder (root){
-   if(!root){
-    return []
-   }
 
-   const result = []
-   const queue = [root]
+function subsets (nums) {
+ 
+  let result = []
 
-   while(queue.length > 0){
-    const level = []
-    const size = queue.length
+  let temp = []
 
-    for(let i=0; i<size; i++){
-      const node = queue.shift()
-      level.push(node.val)
-
-      if(node.left){
-        queue.push(node.left)
-      }
-
-      if(node.right){
-        queue.push(node.right)
-      }
+   const dfs = (nums , i) => {
+    if(i === nums.length){
+      return result.push([...temp])
     }
-    result.push(level)
+
+    temp.push(nums[i])
+    dfs(nums , i +1)
+    temp.pop()
+    dfs(nums , i+1)
    }
+
+   dfs( nums , 0)
    return result
+  
 }
-
-
-const result = levelOrder([3,9,20,null,null,15,7])
-
-console.log(levelOrder([3,9,20,null,null,15,7]))  // Output: [[3],[9,20],[15,7]]
+console.log(subsets([1 , 2,3]));

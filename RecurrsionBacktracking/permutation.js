@@ -8,6 +8,7 @@
 
 function permutations(nums) {
     const result = [];
+    const temp = []
 
     // dfs recursive helper function
     const dfs = (i, nums) => {

@@ -15,10 +15,11 @@ function checkPossibility(nums) {
                   nums[i] = nums[i+1]
               }
           }
+
          
       } 
       return true  
    }
    
    console.log(checkPossibility([4, 2, 3])); // Output: true
-   console.log(checkPossibility([-1, 4, 2, 3]));
+   console.log(checkPossibility([ 4, 2, 1]));
