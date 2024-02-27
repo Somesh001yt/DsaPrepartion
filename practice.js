@@ -1,23 +1,18 @@
 
-function subsets (nums) {
- 
-  let result = []
+function removeElement (nums , val) {
+ let left = 0;
+ let right = nums.length -1
 
-  let temp = []
-
-   const dfs = (nums , i) => {
-    if(i === nums.length){
-      return result.push([...temp])
-    }
-
-    temp.push(nums[i])
-    dfs(nums , i +1)
-    temp.pop()
-    dfs(nums , i+1)
-   }
-
-   dfs( nums , 0)
-   return result
-  
+ while (left <= right){
+  if(nums[left] === val){
+   nums[left] = nums[right]
+    right--
+  }else{
+    left ++ 
+   
+  }
+ }
+ return left
 }
-console.log(subsets([1 , 2,3]));
+
+console.log(removeElement([3,2,2,3], 3))
