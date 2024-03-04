@@ -27,7 +27,7 @@ class LinkedList {
 // Inser Last Node
     insertLast(data){
         const newNode = new Node(data)
-     // So here first we check if there is something is linkedlist is there is not the the head is our new Node
+     // So here first we check if there is something in linkedlist if there is not the the head is our new Node
         if(!this.head){
             this.head = newNode
             return
