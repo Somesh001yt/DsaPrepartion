@@ -43,4 +43,4 @@ var intersection = function(nums1, nums2) {
  
 // Big O(n + m).
 
-console.log(intersection([3,2,6,22], [5,21,6,2]));  
+    console.log(intersection([3,2,6,22], [5,21,6,2]));  

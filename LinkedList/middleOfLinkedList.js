@@ -1,9 +1,9 @@
-class ListNode {
-    constructor(val, next = null) {
-        this.val = val;
-        this.next = next;
+    class ListNode {
+        constructor(val, next = null) {
+            this.val = val;
+            this.next = next;
+        }
     }
-}
 
 function middleOfLinkedList(head) {
     let slow = head;
