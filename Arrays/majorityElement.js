@@ -1,16 +1,17 @@
 function majorityElement(nums) {
-    let count = 0;
-    let candidate = null;
-    
-    for (let num of nums) {
-        if (count === 0) {
-            candidate = num;
-        }
-        
-        count += (num === candidate) ? 1 : -1;
+  let count = 0,
+    maj = 0;
+  for (let n of nums) {
+    if (count === 0) {
+      maj = n;
     }
-    
-    return candidate;
+    if (maj === n) {
+      count++;
+    } else {
+      count--;
+    }
+  }
+  return maj;
 }
 
 // Example usage:
