@@ -1,17 +1,27 @@
-function removeElement(nums, k) {
-  let left = 0;
-  let right = nums.length - 1;
+// Subarray Sum Equals K
 
-  while (left <= right) {
-    if (nums[left] === k) {
-      nums[left] = nums[right];
-      console.log(right);
-      right--;
-    } else {
-      left++;
+// Example 1:
+
+// Input: nums = [1,1,1], k = 2
+// Output: 2
+// Example 2:
+
+// Input: nums = [1,2,3], k = 3
+// Output: 2
+
+function subarraySum(nums, target) {
+  let count = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    let sum = 0;
+    for (let j = i; j < nums.length; j++) {
+      sum += nums[j];
+      if (sum === target) {
+        count++;
+      }
     }
   }
-  return left;
+  return count;
 }
 
-console.log(removeElement([3, 2, 2, 3], 3));
+console.log(subarraySum([1, 2, 3], 3));
