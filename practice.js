@@ -1,27 +1,15 @@
-// Subarray Sum Equals K
+function missingElement(nums) {
+  let n = nums.length;
 
-// Example 1:
+  let numSet = new Set(nums);
+  let missing = [];
 
-// Input: nums = [1,1,1], k = 2
-// Output: 2
-// Example 2:
-
-// Input: nums = [1,2,3], k = 3
-// Output: 2
-
-function subarraySum(nums, target) {
-  let count = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    let sum = 0;
-    for (let j = i; j < nums.length; j++) {
-      sum += nums[j];
-      if (sum === target) {
-        count++;
-      }
+  for (let i = 1; i < n; i++) {
+    if (!numSet.has(i)) {
+      missing.push(i);
     }
   }
-  return count;
+  return missing;
 }
 
-console.log(subarraySum([1, 2, 3], 3));
+console.log(missingElement([1, 2, 4, 5, 6, 7]));
