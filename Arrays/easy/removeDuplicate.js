@@ -21,25 +21,54 @@
 //         if(nums[i] !== nums[j]){
 //          i++
 //             nums[i] = nums[j]
-         
-           
+
 //         }
 //     }
 //     return i+ 1
 // }
 
+// function removeDuplicate(nums) {
+//   let uniqueNums = new Set();
+
+//   for (let i = 0; i < nums.length; i++) {
+//     if (uniqueNums.has(nums[i])) {
+//       nums.splice(i, 1);
+//       i--; // Adjust the index after removing an element
+//     } else {
+//       uniqueNums.add(nums[i]);
+//     }
+//   }
+
+//   return nums;
+// }
+
+// console.log(removeDuplicate([1, 1, 2, 3, 4, 5, 4, 6]));
 
 function removeDuplicate(nums) {
-    const uniqueArray = [];
-
-    for (let i = 0; i < nums.length; i++) {
-        if (!uniqueArray.includes(nums[i])) {
-            uniqueArray.push(nums[i]);
-        }
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] === nums[j]) {
+        nums.splice(j, 1);
+        j--; // Adjust the index after removing an element
+      }
     }
+  }
 
-    return uniqueArray;
+  return nums;
 }
 
+console.log(removeDuplicate([1, 1, 2, 3, 4, 5, 4, 6]));
+
+function removeDuplicate(nums) {
+  const uniqueArray = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    if (!uniqueArray.includes(nums[i])) {
+      uniqueArray.push(nums[i]);
+    }
+  }
+
+  return uniqueArray;
+}
 
 console.log(removeDuplicate([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));

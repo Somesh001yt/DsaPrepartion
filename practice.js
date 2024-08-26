@@ -1,15 +1,21 @@
-function missingElement(nums) {
-  let n = nums.length;
+function majorityElement(nums) {
+  let count = 0;
+  let maj = 0;
 
-  let numSet = new Set(nums);
-  let missing = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (count === 0) {
+      maj = nums[i];
+    }
 
-  for (let i = 1; i < n; i++) {
-    if (!numSet.has(i)) {
-      missing.push(i);
+    if (maj === nums[i]) {
+      count++;
+    } else {
+      count--;
     }
   }
-  return missing;
+  return maj;
 }
 
-console.log(missingElement([1, 2, 4, 5, 6, 7]));
+// Example usage:
+console.log(majorityElement([3, 2, 3])); // Output: 3
+console.log(majorityElement([2, 2, 1, 1, 1, 2, 2])); // Output: 2

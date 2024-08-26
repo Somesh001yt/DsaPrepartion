@@ -31,4 +31,3 @@ function lenOfLongSubArr(arr, k) {
 
 console.log(lenOfLongSubArr([10, 5, 2, 7, 1, 9], 15));
 console.log(lenOfLongSubArr([-1, 2, 3], 6));
--1, 2, 3;
